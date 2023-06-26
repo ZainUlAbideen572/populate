@@ -10,7 +10,8 @@ module.exports={
         return res.send(citydata)
     },
     userbycity:async(req,res)=>{
-        const citi=await citymodel.find({_id:req.body.city_id}).populate('user_id');
+        const citi=await citymodel.find({_id:req.body.city_id}).populate("user_id");
         console.log(citi)
+        res.send(citi)
     }
 }
